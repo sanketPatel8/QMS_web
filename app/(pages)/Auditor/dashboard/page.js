@@ -1,7 +1,11 @@
-import React from "react";
+"use client";
+import React from 'react'
+import Sidebar from '@/components/module/audit_schedule/sidebar';
+function page() {
 
-const page = () => {
-  return <div>page</div>;
-};
+  return (
+  <Sidebar />
+  )
+}
 
-export default page;
+export default page
