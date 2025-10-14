@@ -1,0 +1,542 @@
+:root {
+}
+
+/* Text Styles */
+.heading-hero {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 110.00000238418579%;
+  letter-spacing: -1px;
+}
+
+.heading-section-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 110.00000238418579%;
+  letter-spacing: -1px;
+}
+
+.heading-40 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 110.00000238418579%;
+  letter-spacing: -1px;
+}
+
+.heading-32 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 110.00000238418579%;
+  letter-spacing: -1px;
+}
+
+.heading-24 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 110.00000238418579%;
+  letter-spacing: -1px;
+}
+
+.heading-22 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 110.00000238418579%;
+  letter-spacing: 0%;
+}
+
+.heading-20 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 110.00000238418579%;
+  letter-spacing: 0%;
+}
+
+.heading-16 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 110.00000238418579%;
+  letter-spacing: 0%;
+}
+
+.heading-main-title-label {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 110.00000238418579%;
+  letter-spacing: 0%;
+  text-transform: upper;
+}
+
+.heading-14 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 129.99999523162842%;
+  letter-spacing: 0%;
+}
+
+.heading-18 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 110.00000238418579%;
+  letter-spacing: 0%;
+}
+
+.heading-12 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 110.00000238418579%;
+  letter-spacing: 0%;
+}
+
+.heading-36 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 110.00000238418579%;
+  letter-spacing: -1px;
+}
+
+.heading-28 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 110.00000238418579%;
+  letter-spacing: -1px;
+}
+
+.body-24 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 129.99999523162842%;
+  letter-spacing: 0%;
+}
+
+.body-20 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 129.99999523162842%;
+  letter-spacing: 0%;
+}
+
+.body-10 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 129.99999523162842%;
+  letter-spacing: 0%;
+}
+
+.body-12 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 129.99999523162842%;
+  letter-spacing: 0%;
+}
+
+.body-14 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 129.99999523162842%;
+  letter-spacing: 0%;
+}
+
+.body-16 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 129.99999523162842%;
+  letter-spacing: 0%;
+}
+
+.body-mail {
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 110.00000238418579%;
+  letter-spacing: 0%;
+  text-transform: lower;
+}
+
+.body-18 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 129.99999523162842%;
+  letter-spacing: 0%;
+}
+
+.body-32 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 129.99999523162842%;
+  letter-spacing: 0%;
+}
+
+.medium-32 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 110.00000238418579%;
+  letter-spacing: -1px;
+}
+
+.medium-24 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 110.00000238418579%;
+  letter-spacing: -1px;
+}
+
+.medium-20 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 110.00000238418579%;
+  letter-spacing: 0px;
+}
+
+.medium-18 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 120.00000476837158%;
+  letter-spacing: 0px;
+}
+
+.medium-16 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 110.00000238418579%;
+  letter-spacing: 0px;
+}
+
+.medium-14 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 124.00000095367432%;
+  letter-spacing: 0px;
+}
+
+.medium-12 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 110.00000238418579%;
+  letter-spacing: 0px;
+}
+
+.medium-40 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 110.00000238418579%;
+  letter-spacing: -1px;
+}
+
+.important-project-name {
+  font-family: "DM Sans", sans-serif;
+  font-size: 54px;
+  font-weight: 900;
+  line-height: 110.00000238418579%;
+  letter-spacing: 0%;
+  text-transform: upper;
+}
+
+.important-menu {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 110.00000238418579%;
+  letter-spacing: 0%;
+}
+
+.important-btn {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 110.00000238418579%;
+  letter-spacing: 0%;
+}
+
+.important-btn-big {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 110.00000238418579%;
+  letter-spacing: 0%;
+}
+
+.important-btn-small {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 110.00000238418579%;
+  letter-spacing: 0%;
+}
+
+.important-btn-xs {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 110.00000238418579%;
+  letter-spacing: 0%;
+}
+
+/* Paint Styles */
+.main-primary {
+  background-color: rgb(248, 252, 255);
+  opacity: 1;
+}
+
+.main-secondary {
+  background-color: rgb(0, 68, 254);
+  opacity: 1;
+}
+
+.main-territory {
+  background-color: rgb(178, 185, 201);
+  opacity: 1;
+}
+
+.main-accent {
+  background-color: rgb(11, 35, 129);
+  opacity: 1;
+}
+
+.text-text-light {
+  background-color: rgb(254, 254, 254);
+  opacity: 1;
+}
+
+.text-text-dark {
+  background-color: rgb(29, 29, 29);
+  opacity: 1;
+}
+
+.text-text-dark-body {
+  background-color: rgb(151, 154, 163);
+  opacity: 1;
+}
+
+.text-text-light-body {
+  background-color: rgb(254, 254, 254);
+  opacity: 0.800000011920929;
+}
+
+.state-hover-visited {
+  background-color: rgb(0, 68, 254);
+  opacity: 1;
+  background: rgb(0, 68, 254), rgb(0, 0, 0);
+}
+
+.state-disable {
+  background-color: rgb(185, 185, 185);
+  opacity: 1;
+}
+
+.state-primary {
+  background: linear-gradient(
+    90deg,
+    rgb(185, 185, 185) 0%,
+    rgb(83, 83, 83) 100%
+  );
+}
+
+.primary-shades-50 {
+  background-color: rgb(244, 251, 255);
+  opacity: 1;
+}
+
+.primary-shades-100 {
+  background-color: rgb(222, 242, 255);
+  opacity: 1;
+}
+
+.primary-shades-200 {
+  background-color: rgb(121, 202, 255);
+  opacity: 1;
+}
+
+.primary-shades-300 {
+  background-color: rgb(32, 166, 255);
+  opacity: 1;
+}
+
+.primary-shades-400 {
+  background-color: rgb(26, 133, 204);
+  opacity: 1;
+}
+
+.primary-shades-500 {
+  background-color: rgb(13, 66, 102);
+  opacity: 1;
+}
+
+.feedback-red {
+  background-color: rgb(237, 77, 89);
+  opacity: 1;
+}
+
+.feedback-orange {
+  background-color: rgb(222, 93, 0);
+  opacity: 1;
+}
+
+.feedback-green {
+  background-color: rgb(65, 170, 90);
+  opacity: 1;
+}
+
+.feedback-dark-green {
+  background-color: rgb(29, 154, 61);
+  opacity: 1;
+}
+
+.feedback-yellow {
+  background-color: rgb(234, 192, 0);
+  opacity: 1;
+}
+
+.feedback-purple {
+  background-color: rgb(203, 48, 224);
+  opacity: 1;
+}
+
+.feedback-yellow-10 {
+  background-color: rgb(239, 202, 36);
+  opacity: 0.10000000149011612;
+}
+
+.feedback-orange-10 {
+  background-color: rgb(222, 93, 0);
+  opacity: 0.10000000149011612;
+}
+
+.feedback-green-10 {
+  background-color: rgb(65, 170, 90);
+  opacity: 0.10000000149011612;
+}
+
+.feedback-purple-10 {
+  background-color: rgb(203, 48, 224);
+  opacity: 0.10000000149011612;
+}
+
+.feedback-red-10 {
+  background-color: rgb(237, 77, 89);
+  opacity: 0.10000000149011612;
+}
+
+.feedback-blue-10 {
+  background-color: rgb(34, 84, 221);
+  opacity: 0.10000000149011612;
+}
+
+.feedback-blue {
+  background-color: rgb(34, 84, 221);
+  opacity: 1;
+}
+
+.semantric-04 {
+  background-color: rgb(255, 75, 85);
+  opacity: 1;
+}
+
+.semantric-03 {
+  background-color: rgb(65, 170, 90);
+  opacity: 1;
+}
+
+.semantric-02 {
+  background-color: rgb(71, 89, 255);
+  opacity: 1;
+}
+
+.semantric-01 {
+  background-color: rgb(239, 202, 36);
+  opacity: 1;
+}
+
+.neutral-g {
+  background-color: rgb(125, 125, 125);
+  opacity: 1;
+}
+
+.neutral-w {
+  background-color: rgb(255, 255, 255);
+  opacity: 1;
+}
+
+.neutral-b {
+  background-color: rgb(0, 0, 0);
+  opacity: 1;
+}
+
+.gradient-1 {
+  background: linear-gradient(90deg, rgb(33, 68, 190) 0%, rgb(15, 32, 88) 100%);
+}
+
+.gradient-2 {
+  background: linear-gradient(
+    90deg,
+    rgb(185, 185, 185) 0%,
+    rgb(83, 83, 83) 100%
+  );
+}
+
+.component-card {
+  background-color: rgb(242, 242, 242);
+  opacity: 1;
+}
+
+.component-bdr {
+  background-color: rgb(230, 234, 243);
+  opacity: 1;
+}
+
+.component-input-bg {
+  background-color: rgb(255, 255, 255);
+  opacity: 1;
+}
+
+.component-card-bg {
+  background-color: rgb(255, 255, 255);
+  opacity: 0.550000011920929;
+}
+
+.primary-bg {
+  background-color: rgb(244, 250, 255);
+  opacity: 1;
+  background: rgb(244, 250, 255),
+    linear-gradient(
+      90deg,
+      rgb(190, 216, 255) 0%,
+      rgb(244, 250, 255) 24%,
+      rgb(244, 250, 255) 59%,
+      rgb(190, 216, 255) 100%
+    );
+}
+
+/* Effect Styles */
+.card-blur {
+  filter: blur(100px);
+}
