@@ -1,21 +1,26 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const Login = () => {
+  const router = useRouter();
   return (
     <div>
-      <div className="login-container">
-        <div className="grid grid-cols-[65%_35%] gap-2 ">
-          <div className="h-screen w-full">
+      <div className="container-fluid login-container">
+        <div className="row">
+          <div className="col-md-8 p-0">
             <Image
-              src="/assets/login.jpg"
+              src="/assets/login-left.jpg"
               width={100}
               height={100}
               alt="loginpng"
-              className="w-full h-screen min-w-full"
+              className="w-full h-screen min-w-full rounded-lg"
             />
           </div>
-          <div className="flex justify-center items-center ">
+          <div className="col-md-4 flex justify-center items-center ">
             <div className=" w-[80%]">
               {" "}
               <div className="my-3">
@@ -36,36 +41,51 @@ const Login = () => {
                 </p>
               </div>
               <form className="login-form">
-                <div class="form-floating mb-3">
+                <div className="form-floating mb-3">
                   <input
                     type="email"
-                    class="form-control"
+                    className="form-control"
                     id="floatingInput"
                     placeholder="name@example.com"
                   />
-                  <label for="floatingInput">Email address</label>
+                  <label for="floatingInput" className="font-saira">
+                    Email address
+                  </label>
                 </div>
-                <div class="form-floating mb-3">
+                <div className="form-floating mb-3">
                   <input
                     type="password"
-                    class="form-control"
+                    className="form-control"
                     id="floatingPassword"
                     placeholder="Your Password"
                   />
-                  <label for="floatingPassword">Your Password</label>
+                  <label for="floatingPassword" className="font-saira">
+                    Your Password
+                  </label>
                 </div>
-                <div class="form-check">
+                <div className="form-check mb-3">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="radio"
                     name="flexRadioDefault"
                     id="flexRadioDefault1"
                   />
-                  <label class="form-check-label" for="flexRadioDefault1">
+                  <label className="form-check-label" for="flexRadioDefault1">
                     Default radio
                   </label>
                 </div>
               </form>
+              <button
+                className="btn-blue w-full mb-3"
+                onClick={() => {
+                  router.push("/mr/dashboard");
+                }}
+              >
+                Login
+              </button>
+              <Link href="#" className="text-center">
+                <h6 className="text-black">Forgot Password ?</h6>
+              </Link>
             </div>
           </div>
         </div>
