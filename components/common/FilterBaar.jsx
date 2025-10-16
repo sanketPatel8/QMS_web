@@ -10,7 +10,9 @@ const FilterBaar = ({ title }) => {
   return (
     <div>
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-semibold text-gray-900">{title}</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 my-0 py-0">
+          {title}
+        </h2>
 
         {/* Search and Filter Bar */}
         <div className="flex items-center gap-3">

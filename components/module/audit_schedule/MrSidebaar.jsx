@@ -124,11 +124,11 @@ export default function MrSidebar() {
                         </div>
                         {/* <h1 className="text-3xl font-bold">NC & OFI Report</h1> */}
                         <span
-                          className={`text-sm font-medium ${
+                          className={`text-[12px] font-medium ${
                             active ? "text-white" : "text-[#1D1D1D]"
                           }`}
                         >
-                          NC & OFI Report
+                          {item.lable}
                         </span>
                       </div>
                       <ChevronDown
@@ -164,7 +164,7 @@ export default function MrSidebar() {
                                   }  rounded-full`}
                                 ></div>
                                 {/* active color :-  */}
-                                <span className={`text-sm font-medium`}>
+                                <span className={`text-[12px] font-medium`}>
                                   {e.lable}
                                 </span>
                               </button>
@@ -203,7 +203,7 @@ export default function MrSidebar() {
                     }
                   />
                   <span
-                    className={`text-sm font-medium ${
+                    className={`text-[12px] font-medium ${
                       active || (isDashboardActive && item.id === "dashboard")
                         ? "text-white"
                         : "text-[#1D1D1D]"
