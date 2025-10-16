@@ -1,13 +1,31 @@
+"use client";
+
 import { Bell, Grid3x3, MessageSquareMore } from "lucide-react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { BsFillGrid3X3GapFill } from "react-icons/bs";
 
 export default function Header() {
+  const pathname = usePathname();
+
+  let title;
+  if (pathname == "/mr/dashboard") {
+    title = "Dashboard";
+  } else if (
+    pathname == "/mr/dashboard/auditbydate" ||
+    pathname == "/mr/dashboard/auditbymonth"
+  ) {
+    title = "Assign Audit";
+  } else if (pathname == "/mr/nc-ofi-Report/nc-overview") {
+    title = "NC Overview";
+  } else if (pathname == "/mr/nc-ofi-Report/ofi-overview") {
+    title = "OFI Overview";
+  }
   return (
     <header className="bg-transparent py-2">
       <div className="flex items-center justify-between">
         {/* Logo/Title */}
-        <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
+        <h1 className="text-3xl font-bold text-gray-900">{title}</h1>
 
         {/* Right side icons and profile */}
         <div className="flex items-center gap-3">

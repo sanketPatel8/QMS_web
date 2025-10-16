@@ -1,7 +1,41 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { Search, ChevronDown, Filter } from "lucide-react";
+import Select from "react-select";
+import DropDown from "@/components/common/DropDown";
+import { FaFilter } from "react-icons/fa";
+import { useRouter } from "next/navigation";
+import FilterBaar from "@/components/common/FilterBaar";
+
+const customStyles = {
+  control: (base, state) => ({
+    ...base,
+    display: "flex",
+    alignItems: "center",
+    gap: "0.5rem",
+    padding: "0.25rem 0.5rem", // matches px-2 py-2
+    border: "1px solid #d1d5db", // border-gray-300
+    borderRadius: "0.5rem", // rounded-lg
+    color: "#374151", // text-gray-700
+    backgroundColor: state.isFocused ? "#f9fafb" : "white", // hover:bg-gray-50
+    transition: "all 0.2s",
+    boxShadow: "none",
+    "&:hover": {
+      borderColor: "#9ca3af", // hover:border-gray-400
+      backgroundColor: "#f9fafb",
+    },
+  }),
+  menu: (base) => ({
+    ...base,
+    borderRadius: "0.5rem",
+    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+    zIndex: 50,
+  }),
+};
 
 export default function OverViewDetails() {
+  const router = useRouter();
   const auditItems = [
     { label: "Layer Process Audit", completed: 1, total: 4 },
     { label: "Supplier Audit", completed: 1, total: 6 },
@@ -29,39 +63,36 @@ export default function OverViewDetails() {
     <>
       <div className="row w-full mx-0">
         <div className="col-12 mx-0 px-0">
-          <div className="bg-white border-b border-gray-200 px-3 py-3 ">
-            <div className="flex items-center justify-between">
-              {/* Page Title */}
-              <h2 className="text-2xl font-semibold text-gray-900">
+          <div className="bg-[#F6FAFF] border-b border-gray-200 px-3 py-3 ">
+            {/* <div className="flex items-center justify-between">
+              <h5 className="text-2xl font-semibold text-gray-900">
                 Audit Overview
-              </h2>
+              </h5>
 
-              {/* Right side controls */}
               <div className="flex items-center gap-4">
-                {/* Search Input */}
                 <div className="relative">
                   <input
                     type="text"
                     placeholder="Search"
-                    className="pl-4 pr-4 py-2 w-64 border border-gray-300 rounded-lg text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2  focus:border-transparent"
+                    className="pl-4 pr-4 py-2 w-64 border bg-white border-gray-300 rounded-lg text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2  focus:border-transparent"
                   />
                 </div>
 
-                {/* Pending Dropdown */}
-                <button className="flex items-center gap-2 px-2 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors">
-                  <span className="font-medium">Pending</span>
-                  <ChevronDown size={18} />
-                </button>
+                <DropDown
+                  options={options}
+                  selected={selected}
+                  setSelected={setSelected}
+                />
 
-                {/* Filter Button */}
-                <button className="p-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors">
-                  <Filter size={20} />
+                <button className="p-2 border bg-white border-gray-300 !rounded-md text-gray-700 hover:bg-gray-50 transition-colors">
+                  <FaFilter size={20} />
                 </button>
               </div>
-            </div>
+            </div> */}
+            <FilterBaar title="Audit Overview" />
           </div>
         </div>
-        <div className="w-full p-6 bg-white col-md-4">
+        <div className="w-full p-6 bg-[#F6FAFF] col-md-4">
           {/* Total Audit Section */}
           <div className="mb-6">
             <div className="flex justify-between items-center mb-3">
@@ -92,9 +123,18 @@ export default function OverViewDetails() {
                 </span>
               </div>
             ))}
+
+            <button
+              className="btn-blue w-full py-3"
+              onClick={() => {
+                router.push("/mr/dashboard/auditbymonth");
+              }}
+            >
+              Assign Audit
+            </button>
           </div>
         </div>
-        <div className="bg-white w-full col-md-8">
+        <div className="bg-[#F6FAFF] w-full col-md-8">
           {audits.map((audit, index) => (
             <div
               key={index}
