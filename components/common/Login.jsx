@@ -21,7 +21,7 @@ const Login = () => {
             />
           </div>
           <div className="col-md-4 flex justify-center items-center ">
-            <div className=" w-[80%]">
+            <div className="w-[80%]">
               {" "}
               <div className="my-3">
                 <Image
@@ -71,7 +71,7 @@ const Login = () => {
                     id="flexRadioDefault1"
                   />
                   <label className="form-check-label" for="flexRadioDefault1">
-                    Default radio
+                    Remember Me
                   </label>
                 </div>
               </form>

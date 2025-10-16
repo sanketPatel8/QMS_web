@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Search, ChevronDown, Filter } from "lucide-react";
 import DropDown from "./DropDown";
 import { FaFilter } from "react-icons/fa";
+import FilterBaar from "./FilterBaar";
 
 export default function ActivityList() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -76,46 +77,14 @@ export default function ActivityList() {
   return (
     <div className="bg-[#FAFDFF] rounded-md p-6">
       {/* Header */}
-      <div className="flex items-center justify-between mb-6">
-        <h3 className="text-xl font-semibold text-gray-900">OFI Activity</h3>
-
-        <div className="flex items-center gap-3">
-          {/* Search */}
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Search"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="px-4 py-2 w-48 border border-gray-300 bg-white rounded-lg text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:border-transparent"
-            />
-          </div>
-
-          {/* Filter Dropdown */}
-          {/* <button className="flex items-center gap-2 px-3 py-2 border border-gray-300 rounded-lg text-sm text-gray-700 hover:bg-gray-50 transition-colors">
-            <span>{filterType}</span>
-            <ChevronDown size={16} />
-          </button> */}
-
-          <DropDown
-            options={options}
-            selected={selected}
-            setSelected={setSelected}
-          />
-
-          {/* Filter Icon */}
-          <button className="p-2 border bg-white border-gray-300 !rounded-md text-gray-700 hover:bg-gray-50 transition-colors">
-            <FaFilter size={20} />
-          </button>
-        </div>
-      </div>
+      <FilterBaar title="OFI Activity" />
 
       {/* Scrollable Activity List */}
       <div className="space-y-3 max-h-[400px] overflow-y-auto pr-2">
         {activities.map((activity) => (
           <div
             key={activity.id}
-            className="flex items-center gap-4 p-4 border-b border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
+            className="flex items-center gap-4 p-1 border-b border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
           >
             {/* Thumbnail */}
             <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-gray-200">

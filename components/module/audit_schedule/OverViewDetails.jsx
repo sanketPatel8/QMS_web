@@ -134,21 +134,19 @@ export default function OverViewDetails() {
             </button>
           </div>
         </div>
-        <div className="bg-[#F6FAFF] w-full col-md-8">
+        <div className="bg-[#F6FAFF] w-full col-md-8 border-l border-[#E6EAF3]">
           {audits.map((audit, index) => (
             <div
               key={index}
-              className="flex justify-between border-b last:border-none"
+              className="flex justify-between border-b border-[#E6EAF3] last:border-none py-1"
             >
               {/* Left Section */}
               <div className="ml-[20px]">
-                <p className="text-[12px] mb-2 mt-2 text-gray-500">
-                  {audit.date}
-                </p>
-                <p className="text-[14px] mb-2 font-semibold text-[#1D1D1D]">
+                <p className="text-[12px] my-1 text-gray-500">{audit.date}</p>
+                <p className="text-[14px] my-1 font-semibold text-[#1D1D1D]">
                   {audit.id} • {audit.title} • {audit.location}
                 </p>
-                <p className="text-[12px] mb-2 text-gray-600">
+                <p className="text-[12px] my-1 text-gray-600">
                   {audit.assignedTo.join(" • ")}
                 </p>
               </div>

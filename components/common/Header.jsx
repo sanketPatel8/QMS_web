@@ -1,11 +1,18 @@
 "use client";
 
-import { Bell, Grid3x3, MessageSquareMore } from "lucide-react";
+import {
+  Bell,
+  Grid3x3,
+  MessageSquareMore,
+  PanelLeftClose,
+  PanelRightOpen,
+} from "lucide-react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { BsFillGrid3X3GapFill } from "react-icons/bs";
+import { RiMenu2Line } from "react-icons/ri";
 
-export default function Header() {
+export default function Header({ isExpanded, setIsExpanded }) {
   const pathname = usePathname();
 
   let title;
@@ -22,10 +29,27 @@ export default function Header() {
     title = "OFI Overview";
   }
   return (
-    <header className="bg-transparent py-2">
+    <header className="bg-transparent py-1">
       <div className="flex items-center justify-between">
         {/* Logo/Title */}
-        <h1 className="text-3xl font-bold text-gray-900">{title}</h1>
+        <div className="flex items-center gap-4">
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="p-1 rounded hover:bg-gray-200 transition-colors"
+          >
+            {isExpanded ? (
+              <PanelLeftClose className="w-7 h-7 text-gray-700" />
+            ) : (
+              <PanelRightOpen className="w-7 h-7 text-gray-700" />
+            )}
+          </button>
+          {/* <button>
+            <RiMenu2Line size={30} />
+          </button> */}
+          <h1 className="!text-3xl font-bold text-gray-900 my-0 py-0">
+            {title}
+          </h1>
+        </div>
 
         {/* Right side icons and profile */}
         <div className="flex items-center gap-3">

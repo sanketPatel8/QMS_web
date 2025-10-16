@@ -14,7 +14,7 @@ export default function DropDown({ options, selected, setSelected }) {
       {/* Dropdown Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-center gap-3 px-1 py-2 bg-white border-1 border-[#E6EAF3] !rounded-md hover:border-gray-300 transition-all min-w-[150px]"
+        className="flex items-center justify-between gap-3 px-3 py-2 bg-white border-1 border-[#E6EAF3] !rounded-md hover:border-gray-300 transition-all min-w-[100px]"
       >
         <span className="text-xl text-gray-900">{selected.value}</span>
         <ChevronDown
@@ -32,7 +32,7 @@ export default function DropDown({ options, selected, setSelected }) {
             <button
               key={option.value}
               onClick={() => handleSelect(option)}
-              className={`w-full px-8 py-2 text-left text-xl font-medium transition-colors ${
+              className={`w-full px-2 py-2 text-left text-sm font-medium transition-colors ${
                 selected.value === option.value
                   ? "bg-gray-100 text-gray-900"
                   : "text-gray-700 hover:bg-gray-50"
