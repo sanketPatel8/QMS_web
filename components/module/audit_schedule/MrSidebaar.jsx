@@ -5,6 +5,7 @@ import { Home, Users, ChevronDown, Settings } from "lucide-react";
 
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function MrSidebar() {
   const [selectedItem, setSelectedItem] = useState("dashboard");
@@ -47,13 +48,15 @@ export default function MrSidebar() {
     <div className="h-screen flex flex-col bg-[#F4FAFF]">
       {/* Header */}
       <div className="ml-[24px] py-[35px] flex items-center">
-        <Image
-          src="/assets/qms_logo.svg"
-          width={100}
-          height={100}
-          alt="logo"
-          className="w-[87px] h-[27px]"
-        />
+        <Link href="/">
+          <Image
+            src="/assets/qms_logo.svg"
+            width={100}
+            height={100}
+            alt="logo"
+            className="w-[87px] h-[27px]"
+          />
+        </Link>
       </div>
 
       {/* Navigation Items */}
