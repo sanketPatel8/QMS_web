@@ -10,7 +10,7 @@ const page = () => {
       <div className="w-full max-w-full">
         <div className="row gap-0 my-2">
           <div className="col-md-12">
-            <OverViewDetails />
+            <OverViewDetails userType="mr" />
           </div>
         </div>
         <div className="row my-2">

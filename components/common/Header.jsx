@@ -16,7 +16,7 @@ export default function Header({ isExpanded, setIsExpanded }) {
   const pathname = usePathname();
 
   let title;
-  if (pathname == "/mr/dashboard") {
+  if (pathname == "/mr/dashboard" || pathname == "/Auditor/dashboard") {
     title = "Dashboard";
   } else if (
     pathname == "/mr/dashboard/auditbydate" ||

@@ -34,7 +34,7 @@ const customStyles = {
   }),
 };
 
-export default function OverViewDetails() {
+export default function OverViewDetails({ userType }) {
   const router = useRouter();
   const auditItems = [
     { label: "Layer Process Audit", completed: 1, total: 4 },
@@ -124,14 +124,16 @@ export default function OverViewDetails() {
               </div>
             ))}
 
-            <button
-              className="btn-blue w-full py-3"
-              onClick={() => {
-                router.push("/mr/dashboard/auditbymonth");
-              }}
-            >
-              Assign Audit
-            </button>
+            {userType === "mr" && (
+              <button
+                className="btn-blue w-full py-3"
+                onClick={() => {
+                  router.push("/mr/dashboard/auditbymonth");
+                }}
+              >
+                Assign Audit
+              </button>
+            )}
           </div>
         </div>
         <div className="bg-[#F6FAFF] w-full col-md-8 border-l border-[#E6EAF3]">
