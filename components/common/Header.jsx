@@ -8,13 +8,14 @@ import {
   PanelRightOpen,
 } from "lucide-react";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { BsFillGrid3X3GapFill } from "react-icons/bs";
 import { RiMenu2Line } from "react-icons/ri";
 import NotificationPanel from "./NotificationPanel";
 
 export default function Header({ isExpanded, setIsExpanded }) {
   const pathname = usePathname();
+  const router = useRouter();
 
   let title;
   if (pathname == "/mr/dashboard" || pathname == "/Auditor/dashboard") {
@@ -54,6 +55,30 @@ export default function Header({ isExpanded, setIsExpanded }) {
 
         {/* Right side icons and profile */}
         <div className="flex items-center gap-3">
+          <button
+            className="text-gray-700 p-2 !rounded-md hover:text-gray-900 transition-colors bg-[#F7FBFF]"
+            onClick={() => {
+              router.push("/mr/dashboard");
+            }}
+          >
+            mr
+          </button>
+          <button
+            className="text-gray-700 p-2 !rounded-md hover:text-gray-900 transition-colors bg-[#F7FBFF]"
+            onClick={() => {
+              router.push("/auditee/dashboard/");
+            }}
+          >
+            auditee
+          </button>
+          <button
+            className="text-gray-700 p-2 !rounded-md hover:text-gray-900 transition-colors bg-[#F7FBFF]"
+            onClick={() => {
+              router.push("/auditor/dashboard/");
+            }}
+          >
+            auditor
+          </button>
           {/* Grid icon */}
           <button className="text-gray-700 p-2 !rounded-md hover:text-gray-900 transition-colors bg-[#F7FBFF]">
             <BsFillGrid3X3GapFill size={24} />

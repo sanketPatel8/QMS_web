@@ -5,7 +5,7 @@ import { Search, ChevronDown, Filter } from "lucide-react";
 import Select from "react-select";
 import DropDown from "@/components/common/DropDown";
 import { FaFilter } from "react-icons/fa";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import FilterBaar from "@/components/common/FilterBaar";
 
 const customStyles = {
@@ -36,6 +36,19 @@ const customStyles = {
 
 export default function OverViewDetails({ userType }) {
   const router = useRouter();
+  const pathname = usePathname();
+
+  let activeTab = "";
+
+  // Check substring in pathname
+  if (pathname.includes("mr")) {
+    activeTab = "/mr/dashboard";
+  } else if (pathname.includes("auditor")) {
+    activeTab = "/auditor/dashboard/scopeview/1";
+  } else if (pathname.includes("auditee")) {
+    activeTab = "/auditee/dashboard/auditeeView/1";
+  }
+
   const auditItems = [
     { label: "Layer Process Audit", completed: 1, total: 4 },
     { label: "Supplier Audit", completed: 1, total: 6 },
@@ -158,7 +171,12 @@ export default function OverViewDetails({ userType }) {
                 <span className="bg-blue-100 text-blue-700 !text-[12px] font-semibold !p-[6px] rounded">
                   {audit.status}
                 </span>
-                <button className="text-blue-600 !text-[12px] font-medium border !border-blue-500 !px-[6px] !py-[4px] rounded">
+                <button
+                  className="text-blue-600 !text-[12px] font-medium border !border-blue-500 !px-[6px] !py-[4px] rounded"
+                  onClick={() => {
+                    router.push(activeTab);
+                  }}
+                >
                   View
                 </button>
               </div>

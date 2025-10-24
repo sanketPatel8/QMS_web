@@ -1,19 +1,36 @@
-import React from 'react';
-import { Edit, Plus, ChevronDown } from 'lucide-react';
+"use client";
 
-export const ScopeTable = ({ data = [], emptyMessage = "Please add scope of audit." }) => {
+import React, { useState } from "react";
+import { Edit, Plus, ChevronDown } from "lucide-react";
+import AuditSidebars from "./AuditSidebars";
+
+export const ScopeTable = ({
+  data = [],
+  emptyMessage = "Please add scope of audit.",
+}) => {
+  const [sidebarType, setSidebarType] = useState(null);
+
+  const handleToggle = (type) => {
+    setSidebarType((prev) => (prev === type ? null : type));
+  };
   return (
     <div className="w-full bg-white rounded">
       {/* Header Section */}
       <div className="flex items-center justify-between px-6 py-3 border-b border-gray-200">
-        <h2 className="!text-[18px] font-semibold text-gray-900">Audit Scope</h2>
+        <h2 className="!text-[18px] font-semibold text-gray-900">
+          Audit Scope
+        </h2>
         <div className="flex items-center gap-3">
-         { data.length > 0 && <button className="px-[16px] py-[10px] !text-[14px] font-medium text-blue-600 border border-blue-600 rounded hover:bg-blue-50 transition-colors flex items-center gap-2">
-            Export as
-            <ChevronDown className="w-4 h-4" />
-          </button>
-          }
-          <button className="px-[16px] py-[10px] !text-[14px] font-medium text-white bg-blue-600 rounded hover:bg-blue-700 transition-colors flex items-center gap-2">
+          {data.length > 0 && (
+            <button className="px-[16px] py-[10px] !text-[14px] font-medium text-blue-600 border border-blue-600 rounded hover:bg-blue-50 transition-colors flex items-center gap-2">
+              Export as
+              <ChevronDown className="w-4 h-4" />
+            </button>
+          )}
+          <button
+            className="px-[16px] py-[10px] !text-[14px] font-medium text-white bg-blue-600 rounded hover:bg-blue-700 transition-colors flex items-center gap-2"
+            onClick={() => handleToggle("reschedule")}
+          >
             Add Scope
             <Plus className="w-4 h-4" />
           </button>
@@ -45,13 +62,19 @@ export const ScopeTable = ({ data = [], emptyMessage = "Please add scope of audi
           <tbody className="bg-white">
             {data.length === 0 ? (
               <tr>
-                <td colSpan="5" className="px-6 py-32 text-center text-sm text-gray-900">
+                <td
+                  colSpan="5"
+                  className="px-6 py-32 text-center text-sm text-gray-900"
+                >
                   {emptyMessage}
                 </td>
               </tr>
             ) : (
               data.map((row, index) => (
-                <tr key={index} className="hover:bg-gray-50 transition-colors !border-b !border-gray-200 last:border-b-0">
+                <tr
+                  key={index}
+                  className="hover:bg-gray-50 transition-colors !border-b !border-gray-200 last:border-b-0"
+                >
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                     {row.date}
                   </td>
@@ -65,7 +88,7 @@ export const ScopeTable = ({ data = [], emptyMessage = "Please add scope of audi
                     {row.scope}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm">
-                    <button 
+                    <button
                       onClick={() => row.onEdit?.(row)}
                       className="p-2 bg-gray-200 hover:bg-gray-300 rounded transition-colors"
                       aria-label="Edit"
@@ -79,6 +102,12 @@ export const ScopeTable = ({ data = [], emptyMessage = "Please add scope of audi
           </tbody>
         </table>
       </div>
+
+      <AuditSidebars
+        type={sidebarType}
+        onClose={() => setSidebarType(null)}
+        userType="auditor"
+      />
     </div>
   );
 };

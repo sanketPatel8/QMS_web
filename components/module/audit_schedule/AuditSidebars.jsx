@@ -3,12 +3,7 @@ import { X, Calendar, Clock, Send } from "lucide-react";
 import DatePicker from "@/components/common/DatePicker";
 import TimePicker from "@/components/common/TimePicker";
 
-export default function AuditSidebars({ type, onClose }) {
-  const [startDate, setStartDate] = useState("05-Oct-2025");
-  const [startTime, setStartTime] = useState("10:00 AM");
-  const [endTime, setEndTime] = useState("12:00 AM");
-  const [notes, setNotes] = useState("Due to workload");
-  const [message, setMessage] = useState("Tell me if it is possible");
+export default function AuditSidebars({ type, onClose, userType }) {
   const [StartMonth, setStartMonth] = useState(new Date());
   const [selectedTime, setSelectedTime] = useState("10:00 AM");
   const [remarks, setRemarks] = useState("");
@@ -27,7 +22,9 @@ export default function AuditSidebars({ type, onClose }) {
       >
         <div className="p-6 flex flex-col h-full">
           <div className="flex justify-between items-center mb-8">
-            <h2 className="text-2xl font-bold text-gray-900">Reschedule</h2>
+            <h2 className="text-2xl font-bold text-gray-900">
+              {userType == "auditor" ? "Add Scope" : "Reschedule"}
+            </h2>
             <button
               onClick={onClose}
               className="text-gray-400 hover:text-gray-600"
@@ -51,14 +48,14 @@ export default function AuditSidebars({ type, onClose }) {
             <div className="row my-3">
               <div className="col-md-6">
                 <TimePicker
-                  label="Select Time"
+                  label="Start Time"
                   selectedTime={selectedTime}
                   setSelectedTime={setSelectedTime}
                 />
               </div>
               <div className="col-md-6">
                 <TimePicker
-                  label="Select Time"
+                  label="End Time"
                   selectedTime={selectedTime}
                   setSelectedTime={setSelectedTime}
                 />
@@ -86,7 +83,7 @@ export default function AuditSidebars({ type, onClose }) {
             </div>
 
             <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
-              Send to Auditee
+              {userType == "auditor" ? "Add Scope" : "Send to Auditee"}
             </button>
           </div>
         </div>
