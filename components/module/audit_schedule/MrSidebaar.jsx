@@ -98,11 +98,44 @@ export default function MrSidebar({ isExpanded, setIsExpanded, ModuleType }) {
     },
   ];
 
+  const AuditeeNavItems = [
+    {
+      id: "dashboard",
+      label: "Dashboard",
+      icon: Home,
+      href: "/auditor/dashboard",
+      activeId: "dashboard",
+    },
+    {
+      id: "NC & OFI Management",
+      label: "NC & OFI Management",
+      icon: CalendarSearch,
+      href: "#",
+      activeId: "NC & OFI Management",
+    },
+    {
+      id: "Report & Analytics",
+      label: "Report & Analytics",
+      icon: StickyNote,
+      href: "#",
+      activeId: "Report & Analytics",
+    },
+    {
+      id: "Performance",
+      label: "Performance",
+      icon: FileSearch2,
+      href: "#",
+      activeId: "Performance",
+    },
+  ];
+
   useEffect(() => {
     if (ModuleType === "mr") {
       setActiveNav(MrnavItems);
     } else if (ModuleType === "auditor") {
       setActiveNav(AuditorNavItems);
+    } else if (ModuleType === "auditee") {
+      setActiveNav(AuditeeNavItems);
     }
   }, [ModuleType]);
 
