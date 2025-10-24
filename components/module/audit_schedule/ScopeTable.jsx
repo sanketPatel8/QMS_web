@@ -8,10 +8,11 @@ export const ScopeTable = ({ data = [], emptyMessage = "Please add scope of audi
       <div className="flex items-center justify-between px-6 py-3 border-b border-gray-200">
         <h2 className="!text-[18px] font-semibold text-gray-900">Audit Scope</h2>
         <div className="flex items-center gap-3">
-          <button className="px-[16px] py-[10px] !text-[14px] font-medium text-blue-600 border border-blue-600 rounded hover:bg-blue-50 transition-colors flex items-center gap-2">
+         { data.length > 0 && <button className="px-[16px] py-[10px] !text-[14px] font-medium text-blue-600 border border-blue-600 rounded hover:bg-blue-50 transition-colors flex items-center gap-2">
             Export as
             <ChevronDown className="w-4 h-4" />
           </button>
+          }
           <button className="px-[16px] py-[10px] !text-[14px] font-medium text-white bg-blue-600 rounded hover:bg-blue-700 transition-colors flex items-center gap-2">
             Add Scope
             <Plus className="w-4 h-4" />
