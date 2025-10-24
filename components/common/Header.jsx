@@ -11,6 +11,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { BsFillGrid3X3GapFill } from "react-icons/bs";
 import { RiMenu2Line } from "react-icons/ri";
+import NotificationPanel from "./NotificationPanel";
 
 export default function Header({ isExpanded, setIsExpanded }) {
   const pathname = usePathname();
@@ -64,11 +65,12 @@ export default function Header({ isExpanded, setIsExpanded }) {
           </button>
 
           {/* Notification bell with badge */}
-          <button className="relative text-gray-700 p-2 !rounded-md hover:text-gray-900 transition-colors bg-[#F7FBFF]">
-            <Bell size={24} />
+          <button className="relative text-gray-700 !rounded-md hover:text-gray-900 transition-colors bg-[#F7FBFF]">
+            {/* <Bell size={24} />
             <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-semibold rounded-full w-5 h-5 flex items-center justify-center">
               3
-            </span>
+            </span> */}
+            <NotificationPanel />
           </button>
 
           {/* Profile section */}

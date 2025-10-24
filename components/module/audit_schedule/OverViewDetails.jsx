@@ -158,7 +158,7 @@ export default function OverViewDetails({ userType }) {
                 <span className="bg-blue-100 text-blue-700 !text-[12px] font-semibold !p-[6px] rounded">
                   {audit.status}
                 </span>
-                <button className="text-blue-600 !text-[12px] font-medium hover:underline border !border-blue-500 !px-[6px] !py-[4px] rounded">
+                <button className="text-blue-600 !text-[12px] font-medium border !border-blue-500 !px-[6px] !py-[4px] rounded">
                   View
                 </button>
               </div>

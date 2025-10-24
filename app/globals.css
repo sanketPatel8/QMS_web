@@ -52,3 +52,11 @@ a {
   align-items: center;
   font-weight: 500;
 }
+
+.chat-send {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 99%, 73% 77%, 0% 75%);
+}
+
+.chat-recive {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 20% 76%, 0 100%, 0% 75%);
+}
