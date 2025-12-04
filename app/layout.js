@@ -9,8 +9,6 @@ import {
 import {} from "next/font/google";
 import "./globals.css";
 import "./style.css";
-import { ToastProvider } from "@/components/ui/ToastProvider";
-import { AuthProvider } from "@/context/AuthContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -53,11 +51,10 @@ export default function RootLayout({ children }) {
       </head>
 
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${bricolage.variable}${saira.variable} antialiased relative `}
+        className={`${geistSans.variable} ${geistMono.variable} ${bricolage.variable}${saira.variable} antialiased`}
       >
-        <ToastProvider>
-          <AuthProvider>{children}</AuthProvider>
-        </ToastProvider>
+        {children}
+
         {/* ✅ Bootstrap JS CDN (optional, only if you use components like modal, dropdown, etc.) */}
         <script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

@@ -12,14 +12,10 @@ import { usePathname, useRouter } from "next/navigation";
 import { BsFillGrid3X3GapFill } from "react-icons/bs";
 import { RiMenu2Line } from "react-icons/ri";
 import NotificationPanel from "./NotificationPanel";
-import { useToast } from "@/Hooks/useToast";
-import { useAuth } from "@/context/AuthContext";
 
 export default function Header({ isExpanded, setIsExpanded }) {
   const pathname = usePathname();
   const router = useRouter();
-  const { showToast } = useToast();
-  const { user } = useAuth();
 
   let title;
   if (pathname == "/mr/dashboard" || pathname == "/Auditor/dashboard") {
@@ -59,7 +55,7 @@ export default function Header({ isExpanded, setIsExpanded }) {
 
         {/* Right side icons and profile */}
         <div className="flex items-center gap-3">
-          {/* <button
+          <button
             className="text-gray-700 p-2 !rounded-md hover:text-gray-900 transition-colors bg-[#F7FBFF]"
             onClick={() => {
               router.push("/mr/dashboard");
@@ -70,7 +66,6 @@ export default function Header({ isExpanded, setIsExpanded }) {
           <button
             className="text-gray-700 p-2 !rounded-md hover:text-gray-900 transition-colors bg-[#F7FBFF]"
             onClick={() => {
-              // showToast("error message!", "error");
               router.push("/auditee/dashboard/");
             }}
           >
@@ -79,20 +74,13 @@ export default function Header({ isExpanded, setIsExpanded }) {
           <button
             className="text-gray-700 p-2 !rounded-md hover:text-gray-900 transition-colors bg-[#F7FBFF]"
             onClick={() => {
-              // showToast("Success message!", "success");
               router.push("/auditor/dashboard/");
             }}
           >
             auditor
-          </button> */}
+          </button>
           {/* Grid icon */}
-          <button
-            onClick={() => {
-              showToast("Success message!", "success");
-              // router.push("/auditor/dashboard/");
-            }}
-            className="text-gray-700 p-2 !rounded-md hover:text-gray-900 transition-colors bg-[#F7FBFF]"
-          >
+          <button className="text-gray-700 p-2 !rounded-md hover:text-gray-900 transition-colors bg-[#F7FBFF]">
             <BsFillGrid3X3GapFill size={24} />
           </button>
 
@@ -102,13 +90,13 @@ export default function Header({ isExpanded, setIsExpanded }) {
           </button>
 
           {/* Notification bell with badge */}
-          {/* <button className="relative text-gray-700 !rounded-md hover:text-gray-900 transition-colors bg-[#F7FBFF]"> */}
-          {/* <Bell size={24} />
+          <button className="relative text-gray-700 !rounded-md hover:text-gray-900 transition-colors bg-[#F7FBFF]">
+            {/* <Bell size={24} />
             <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-semibold rounded-full w-5 h-5 flex items-center justify-center">
               3
             </span> */}
-          <NotificationPanel />
-          {/* </button> */}
+            <NotificationPanel />
+          </button>
 
           {/* Profile section */}
           <div className="flex items-center gap-2 ml-2 p-2 rounded-md bg-[#F7FBFF]">
@@ -123,9 +111,9 @@ export default function Header({ isExpanded, setIsExpanded }) {
             </div>
             <div className="text-left ">
               <p className="text-sm font-semibold text-gray-900 my-0 py-0">
-                {user?.user_name}
+                Liza Brown
               </p>
-              <p className="text-xs text-gray-500 my-0 py-0">{user?.role}</p>
+              <p className="text-xs text-gray-500 my-0 py-0">Auditee</p>
             </div>
           </div>
         </div>
